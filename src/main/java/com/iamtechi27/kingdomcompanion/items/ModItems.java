@@ -29,6 +29,12 @@ public final class ModItems {
 	public static Item bonescythe;
 	public static Item bonehammer;
 	
+	public static Item enderiumsword;
+	public static Item enderiumdagger;
+	public static Item enderiumaxe;
+	public static Item enderiumscythe;
+	public static Item enderiumhammer;
+	
 	public static Item itemtacobeef;
 	public static Item itemtacofish;
 	public static Item modbow;
@@ -38,11 +44,16 @@ public final class ModItems {
 	public static ToolMaterial WOOLDAGGER = EnumHelper.addToolMaterial("WOOLDAGGER", 0, 200, 0.0F, -3.0F, 22);
 	public static ToolMaterial WOOLAXE = EnumHelper.addToolMaterial("WOOLAXE", 0, 200, 0.0F, -2.0F, 22);
 	public static ToolMaterial WOOLHAMMER = EnumHelper.addToolMaterial("WOOLHAMMER", 0, 200, 0.0F, -1.0F, 22);
+	
 	public static ToolMaterial BONESWORD = EnumHelper.addToolMaterial("BONESWORD", 0, 250, 0.0F, 2.0F, 14);
 	public static ToolMaterial BONEDAGGER = EnumHelper.addToolMaterial("BONEDAGGER", 0, 250, 0.0F, 0.0F, 14);
 	public static ToolMaterial BONEAXE = EnumHelper.addToolMaterial("BONEAXE", 0, 250, 0.0F, 3.0F, 14);
 	public static ToolMaterial BONEHAMMER = EnumHelper.addToolMaterial("BONEHAMMER", 0, 250, 0.0F, 5.0F, 14);
 	
+	public static ToolMaterial ENDERIUMSWORD = EnumHelper.addToolMaterial("ENDERIUMSWORD", 0, 750, 0.0F, 4.0F, 22);
+	public static ToolMaterial ENDERIUMDAGGER = EnumHelper.addToolMaterial("ENDERIUMDAGGER", 0, 750, 0.0F, 1.0F, 22);
+	public static ToolMaterial ENDERIUMAXE = EnumHelper.addToolMaterial("ENDERIUMAXE", 0, 750, 0.0F, 5.0F, 22);
+	public static ToolMaterial ENDERIUMHAMMER = EnumHelper.addToolMaterial("ENDERIUMSWORD", 0, 750, 0.0F, 8.0F, 22);
 	
 	public static void init() {
 		
@@ -59,7 +70,11 @@ public final class ModItems {
 		bonescythe = new ItemModSword("bone", "itemscythe", BONEAXE, swordtime);
 		bonehammer = new ItemModSword("bone", "itemhammer", BONEHAMMER, hammertime);
 		
-		
+		enderiumsword = new ItemModSword("enderium", "itemsword", ENDERIUMSWORD, swordtime);
+		enderiumdagger = new ItemModSword("enderium", "itemdagger", ENDERIUMDAGGER, daggertime);
+		enderiumaxe = new ItemModSword("enderium", "itemaxe", ENDERIUMAXE, axetime);
+		enderiumscythe = new ItemModSword("enderium", "itemscythe", ENDERIUMAXE, swordtime);
+		enderiumhammer = new ItemModSword("enderium", "itemhammer", ENDERIUMHAMMER, hammertime);
 		
 		itemtacobeef = new ItemTaco("beef", 9, 12.8F, false);
 		itemtacofish = new ItemTaco("fish", 12, 19.2F, false);

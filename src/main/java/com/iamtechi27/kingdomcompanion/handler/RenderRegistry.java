@@ -16,9 +16,15 @@ public class RenderRegistry {
 			MinecraftForgeClient.registerItemRenderer(ModItems.whitewoolaxe, new RenderBigItem());
 			MinecraftForgeClient.registerItemRenderer(ModItems.whitewoolscythe, new RenderBigItem());
 			MinecraftForgeClient.registerItemRenderer(ModItems.whitewoolhammer, new RenderBigItem());
+			
 			MinecraftForgeClient.registerItemRenderer(ModItems.boneaxe, new RenderBigItem());
 			MinecraftForgeClient.registerItemRenderer(ModItems.bonescythe, new RenderBigItem());
 			MinecraftForgeClient.registerItemRenderer(ModItems.bonehammer, new RenderBigItem());
+			
+			MinecraftForgeClient.registerItemRenderer(ModItems.enderiumaxe, new RenderBigItem());
+			MinecraftForgeClient.registerItemRenderer(ModItems.enderiumscythe, new RenderBigItem());
+			MinecraftForgeClient.registerItemRenderer(ModItems.enderiumhammer, new RenderBigItem());
+			
 			MinecraftForgeClient.registerItemRenderer(ModItems.rapier, new RenderBigItem());
 		//}
 	}
