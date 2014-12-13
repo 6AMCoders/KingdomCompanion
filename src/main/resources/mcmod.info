@@ -1,0 +1,16 @@
+[
+{
+  "modid": "kingdomcompanion",
+  "name": "Kingdom Companion",
+  "description": "A companion mod for the Kingdom Map by Marmokia, Miguul, and iamtechi27.",
+  "version": "710LKA",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["iamtechi27", "Marmokia"],
+  "credits": "Forge and FML guys, for making Forge. Marmokia for textures.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

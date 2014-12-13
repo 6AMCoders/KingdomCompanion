@@ -1,0 +1,20 @@
+item.kingdomcompanion_itemrapier.name=Rapier
+item.kingdomcompanion_itemwoolswordwhite.name=White Wool Sword
+item.kingdomcompanion_itemwooldaggerwhite.name=White Wool Dagger
+item.kingdomcompanion_itemwoolaxewhite.name=White Wool Axe
+item.kingdomcompanion_itemwoolscythewhite.name=White Wool Scythe
+item.kingdomcompanion_itemwoolhammerwhite.name=White Wool Hammer
+item.kingdomcompanion_itemswordbone.name=Bone Sword
+item.kingdomcompanion_itemdaggerbone.name=Bone Dagger
+item.kingdomcompanion_itemaxebone.name=Bone Axe
+item.kingdomcompanion_itemscythebone.name=Bone Scythe
+item.kingdomcompanion_itemhammerbone.name=Bone Hammer
+
+item.kingdomcompanion_itemtacobeef.name=Beef Taco
+item.kingdomcompanion_itemtacofish.name=Fish Taco
+item.kingdomcompanion_modbow.name=Mod Bow (test item)
+
+tile.kingdomcompanion_bonePile.name=Bone Pile
+tile.kingdomcompanion_chains.name=Chains
+
+itemGroup.kingdomcompanion=Kingdom Companion
