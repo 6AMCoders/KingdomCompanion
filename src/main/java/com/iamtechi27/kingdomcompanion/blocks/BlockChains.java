@@ -122,9 +122,11 @@ public class BlockChains extends Block {
     || GameSettings.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindLeft) || GameSettings
     .isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindRight))) {
     player.motionY = 0.2D;
+    player.fallDistance = 0.0F;
     }
     else if (GameSettings.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindSneak)) {
     player.setVelocity(0.0D, 0.08D, 0.0D); // Found this by experimenting. An upward velocity of 0.08 negates gravity fall
+    player.fallDistance = 0.0F;
     }
     }
     }
