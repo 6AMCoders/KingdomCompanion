@@ -17,6 +17,8 @@ public final class ModItems {
 	public static int hammertime = 70;
 	
 	public static Item rapier;
+	public static Item haseoblade;
+	
 	public static Item whitewoolsword;
 	public static Item whitewooldagger;
 	public static Item whitewoolaxe;
@@ -40,6 +42,8 @@ public final class ModItems {
 	public static Item modbow;
 	
 	public static ToolMaterial RAPIER = EnumHelper.addToolMaterial("RAPIER", 0, 250, 0.0F, Float.MAX_VALUE, 14);
+	public static ToolMaterial HASEO = EnumHelper.addToolMaterial("HASEO", 0, 750, 0.0F, 5.0F, 22);
+	
 	public static ToolMaterial WOOLSWORD = EnumHelper.addToolMaterial("WOOLSWORD", 0, 200, 0.0F, -3.0F, 22);
 	public static ToolMaterial WOOLDAGGER = EnumHelper.addToolMaterial("WOOLDAGGER", 0, 200, 0.0F, -3.0F, 22);
 	public static ToolMaterial WOOLAXE = EnumHelper.addToolMaterial("WOOLAXE", 0, 200, 0.0F, -2.0F, 22);
@@ -58,6 +62,8 @@ public final class ModItems {
 	public static void init() {
 		
 		rapier = new ItemRapier(RAPIER);
+		haseoblade = new ItemModSword("haseo", "itemblade", HASEO, daggertime);
+		
 		whitewoolsword = new ItemModSword("white", "itemwoolsword", WOOLSWORD, swordtime);
 		whitewooldagger = new ItemModSword("white", "itemwooldagger", WOOLDAGGER, daggertime);
 		whitewoolaxe = new ItemModSword("white", "itemwoolaxe", WOOLAXE, axetime);
