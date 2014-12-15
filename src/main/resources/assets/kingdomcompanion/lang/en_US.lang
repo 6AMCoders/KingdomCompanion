@@ -14,11 +14,11 @@ item.kingdomcompanion_itemdaggerenderium.name=Enderium Dagger
 item.kingdomcompanion_itemaxeenderium.name=Enderium Axe
 item.kingdomcompanion_itemscytheenderium.name=Enderium Scythe
 item.kingdomcompanion_itemhammerenderium.name=Enderium Hammer
-item.kingdomcompanion_itembladehaseo.name=Haseo Blade
+item.kingdomcompanion_itembladehaseo.name=Blade of Haseo
 
 item.kingdomcompanion_itemtacobeef.name=Beef Taco
 item.kingdomcompanion_itemtacofish.name=Fish Taco
-item.kingdomcompanion_modbow.name=Mod Bow (test item)
+item.kingdomcompanion_itembowtwig.name=Twig Bow
 
 tile.kingdomcompanion_bonePile.name=Bone Pile
 tile.kingdomcompanion_chains.name=Chains

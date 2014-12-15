@@ -3,6 +3,7 @@ package com.iamtechi27.kingdomcompanion.handler;
 import org.lwjgl.opengl.GL11;
 
 import com.iamtechi27.kingdomcompanion.items.ModItems;
+import com.iamtechi27.kingdomcompanion.lib.Constants;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemRenderer;
@@ -15,6 +16,14 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 
 public class RenderBigItem implements IItemRenderer {
+	
+	int renderType;
+	Item item;
+	
+	public RenderBigItem(int t, Item i) {
+		item = i;
+		renderType = t;
+	}
 
 	@Override
 	public boolean handleRenderType(ItemStack item, ItemRenderType type) {
@@ -70,8 +79,8 @@ public class RenderBigItem implements IItemRenderer {
 		Item item = stack.getItem();
 		IIcon icon = item.getIcon(stack, 0);
 		
-		if (item == ModItems.rapier){
-			
+		switch (renderType) {
+		case 2:
 			GL11.glPushMatrix();
 			GL11.glScaled(10.0D, 10.0D, 10.0D);
 			//GL11.glRotated(180, 1.0D, 0.0D, 0.0D);
@@ -80,19 +89,35 @@ public class RenderBigItem implements IItemRenderer {
 			GL11.glTranslated(-1.1D, -0.15D, 0.0D);
 			ItemRenderer.renderItemIn2D(Tessellator.instance, icon.getMaxU(), icon.getMinV(), icon.getMinU(), icon.getMaxV(), 255, 255, 0.0625F);
 			GL11.glPopMatrix();
-		}else{
-		
-		GL11.glPushMatrix();
+			break;
+		case 0:
+			GL11.glPushMatrix();
 
-		// whatever render code you want
-		//Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("kingdomcompanion:textures/items/itemhammerbone.png"));
-		
-		GL11.glScaled(1.7D, 1.7D, 1.7D);
+			GL11.glScaled(1.7D, 1.7D, 1.7D);
 
-		GL11.glTranslated(-0.4D, -0.1D, 0.0D);
+			GL11.glTranslated(-0.4D, -0.1D, 0.0D);
 		
-		ItemRenderer.renderItemIn2D(Tessellator.instance, icon.getMaxU(), icon.getMinV(), icon.getMinU(), icon.getMaxV(), 255, 255, 0.0625F);
-		GL11.glPopMatrix();
+			ItemRenderer.renderItemIn2D(Tessellator.instance, icon.getMaxU(), icon.getMinV(), icon.getMinU(), icon.getMaxV(), 255, 255, 0.0625F);
+			GL11.glPopMatrix();
+			break;
+			
+		case 1: 
+			GL11.glPushMatrix();
+			
+			
+			
+			Minecraft.getMinecraft().renderEngine.bindTexture(
+					Minecraft.getMinecraft().renderEngine.getResourceLocation(stack.getItemSpriteNumber()));
+			//System.out.println(Minecraft.getMinecraft().renderEngine.bindTexture(
+			//		Minecraft.getMinecraft().renderEngine.getResourceLocation(stack.getItemSpriteNumber())));
+			
+			GL11.glScaled(1.5D, 1.5D, 1.5D);
+			
+			
+			ItemRenderer.renderItemIn2D(Tessellator.instance, icon.getMaxU(), icon.getMinV(), icon.getMinU(), icon.getMaxV(), 255, 255, 0.0625F);
+			
+			GL11.glPopMatrix();
+			break;
 		}
 	}
 

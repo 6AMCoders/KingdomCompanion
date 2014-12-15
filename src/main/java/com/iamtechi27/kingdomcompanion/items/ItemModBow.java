@@ -27,14 +27,23 @@ public class ItemModBow extends ItemBow {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[] iconArray;
-	private String name = "itembowtwig";
+	private String name;
+	private double damage;
+	private ItemStack stack;
+	private EntityPlayer player;
+	private ItemStack usingItem;
+	private int useRemaining;
 	
-	public ItemModBow(){
-		setUnlocalizedName(Constants.MODID + "_" + name);
-		//setFull3D();
+	public ItemModBow(String n, double d){
+		super();
+		this.name = n;
+		setUnlocalizedName(Constants.MODID + "_itembow" + name);
+		setFull3D();
+		this.damage = d;
 		//setTextureName(Constants.MODID + ":" + name);
 		GameRegistry.registerItem(this, name);
 		setCreativeTab(KingdomCompanion.tabKingdomCompanion);
+		
 	}
 	
 	/*public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
@@ -95,7 +104,8 @@ public class ItemModBow extends ItemBow {
 	* NOTE: These settings are already added by BattleGear2 when shot from a quiver
 	* @param charge should be a value between 0.0F and 1.0F, inclusive
 	*/
-	public static final void applyArrowSettings(EntityArrow arrow, ItemStack bow, float charge) {
+	public final void applyArrowSettings(EntityArrow arrow, ItemStack bow, float charge) {
+		arrow.setDamage(damage);
 		if (charge == 1.0F) {
 			arrow.setIsCritical(true);
 		}
@@ -115,6 +125,10 @@ public class ItemModBow extends ItemBow {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining) {
+		this.stack = stack;
+		this.player = player;
+		this.usingItem = usingItem;
+		this.useRemaining = useRemaining;
 		if (usingItem == null) { return itemIcon; }
 		int t = stack.getMaxItemUseDuration() - useRemaining;
 		return (t > 17 ? iconArray[2] : (t > 13 ? iconArray[1] : (t > 0 ? iconArray[0] : itemIcon)));
@@ -123,10 +137,10 @@ public class ItemModBow extends ItemBow {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister register) {
-		itemIcon = register.registerIcon(Constants.MODID + ":" + name + "_standby");
+		itemIcon = register.registerIcon(Constants.MODID + ":itembow" + name + "_standby");
 		iconArray = new IIcon[3];
 		for (int i = 0; i < iconArray.length; ++i) {
-			iconArray[i] = register.registerIcon(Constants.MODID + ":" + name + "_pulling_" + i);
+			iconArray[i] = register.registerIcon(Constants.MODID + ":itembow" + name + "_pulling_" + i);
 		}
 	}
 	
@@ -139,5 +153,12 @@ public class ItemModBow extends ItemBow {
 			arrow = new ItemStack(Items.arrow);
 		}
 		return arrow;
+	}
+	
+	public String getIconLocation() {
+		
+		
+		
+		return getIcon(stack, 42, player, usingItem, useRemaining).getIconName();
 	}
 }
