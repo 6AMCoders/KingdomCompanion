@@ -4,6 +4,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 import com.iamtechi27.kingdomcompanion.blocks.ModBlocks;
+import com.iamtechi27.kingdomcompanion.client.GuiHandler;
 import com.iamtechi27.kingdomcompanion.crafting.ModCrafting;
 import com.iamtechi27.kingdomcompanion.handler.RenderRegistry;
 import com.iamtechi27.kingdomcompanion.items.ModItems;
@@ -16,6 +17,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -23,6 +25,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class KingdomCompanion {
 
+	@Mod.Instance(Constants.MODID)
+	public static KingdomCompanion instance;
+	
 	@SidedProxy(clientSide="com.iamtechi27.kingdomcompanion.ClientProxy", serverSide="com.iamtechi27.kingdomcompanion.ServerProxy")
 	public static CommonProxy proxy;
 	
@@ -37,7 +42,7 @@ public class KingdomCompanion {
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		
+		//NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 	}
 	
 	@Mod.EventHandler
@@ -56,6 +61,6 @@ public class KingdomCompanion {
 	@EventHandler
 	public void serverLoad(FMLServerStartingEvent event)
 	{
-		event.registerServerCommand(new GodCommand());
+		//event.registerServerCommand(new GodCommand());
 	}
 }

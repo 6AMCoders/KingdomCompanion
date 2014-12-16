@@ -40,6 +40,9 @@ public final class ModItems {
 	public static Item itemtacobeef;
 	public static Item itemtacofish;
 	public static Item itembowtwig;
+	public static Item itembowwood;
+	public static Item itembowbone;
+	public static Item itembowenderium;
 	
 	public static ToolMaterial RAPIER = EnumHelper.addToolMaterial("RAPIER", 0, 250, 0.0F, Float.MAX_VALUE, 14);
 	public static ToolMaterial HASEO = EnumHelper.addToolMaterial("HASEO", 0, 750, 0.0F, 5.0F, 22);
@@ -84,7 +87,12 @@ public final class ModItems {
 		
 		itemtacobeef = new ItemTaco("beef", 9, 12.8F, false);
 		itemtacofish = new ItemTaco("fish", 12, 19.2F, false);
+		
 		itembowtwig = new ItemModBow("twig", 0.5D);
+		itembowwood = new ItemModBow("wood", 1.05D);
+		itembowbone = new ItemModBow("bone", 1.65D);
+		itembowenderium = new ItemModBow("enderium", 1.7D);
+		
 		
 	}
 	

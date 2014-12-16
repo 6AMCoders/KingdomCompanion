@@ -18,7 +18,11 @@ item.kingdomcompanion_itembladehaseo.name=Blade of Haseo
 
 item.kingdomcompanion_itemtacobeef.name=Beef Taco
 item.kingdomcompanion_itemtacofish.name=Fish Taco
+
 item.kingdomcompanion_itembowtwig.name=Twig Bow
+item.kingdomcompanion_itembowwood.name=Wood Bow
+item.kingdomcompanion_itembowbone.name=Bone Bow
+item.kingdomcompanion_itembowenderium.name=Enderium Bow
 
 tile.kingdomcompanion_bonePile.name=Bone Pile
 tile.kingdomcompanion_chains.name=Chains

@@ -3,7 +3,7 @@
   "modid": "kingdomcompanion",
   "name": "Kingdom Companion",
   "description": "A companion mod for the Kingdom Map by Marmokia, Miguul, and iamtechi27.",
-  "version": "710LMA",
+  "version": "710LPA",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
