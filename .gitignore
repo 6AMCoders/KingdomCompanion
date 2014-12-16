@@ -1,0 +1,14 @@
+eclipse/
+build/
+gradle/
+.settings/
+.gradle/
+.git/
+.classpath/
+.gitignore/
+.project/
+build.bat
+build.gradle
+gradlew
+gradlew.bat
+/bin/
