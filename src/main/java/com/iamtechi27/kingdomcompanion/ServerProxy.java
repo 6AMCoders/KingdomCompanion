@@ -1,7 +1,5 @@
 package com.iamtechi27.kingdomcompanion;
 
-import com.iamtechi27.kingdomcompanion.tileentities.TileEntityDerp;
-
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
