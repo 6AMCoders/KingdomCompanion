@@ -95,7 +95,7 @@ public class RenderBigItem implements IItemRenderer {
 
 			GL11.glScaled(1.7D, 1.7D, 1.7D);
 
-			GL11.glTranslated(-0.4D, -0.1D, 0.0D);
+			GL11.glTranslated(-0.44D, 0.0D, 0.02D);
 		
 			ItemRenderer.renderItemIn2D(Tessellator.instance, icon.getMaxU(), icon.getMinV(), icon.getMinU(), icon.getMaxV(), 255, 255, 0.0625F);
 			GL11.glPopMatrix();
