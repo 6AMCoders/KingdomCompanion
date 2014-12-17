@@ -1,20 +1,25 @@
-item.kingdomcompanion_itemrapier.name=Rapier
+﻿item.kingdomcompanion_itemrapier.name=Rapier
 item.kingdomcompanion_itemwoolswordwhite.name=White Wool Sword
 item.kingdomcompanion_itemwooldaggerwhite.name=White Wool Dagger
 item.kingdomcompanion_itemwoolaxewhite.name=White Wool Axe
 item.kingdomcompanion_itemwoolscythewhite.name=White Wool Scythe
 item.kingdomcompanion_itemwoolhammerwhite.name=White Wool Hammer
+item.kingdomcompanion_itemswordwood.name=Wood Sword
+item.kingdomcompanion_itemdaggerwood.name=Wood Dagger
+item.kingdomcompanion_itemaxewood.name=Wood Axe
+item.kingdomcompanion_itemscythewood.name=Wood Scythe
+item.kingdomcompanion_itemhammerwood.name=Wood Hammer
 item.kingdomcompanion_itemswordbone.name=Bone Sword
 item.kingdomcompanion_itemdaggerbone.name=Bone Dagger
 item.kingdomcompanion_itemaxebone.name=Bone Axe
 item.kingdomcompanion_itemscythebone.name=Bone Scythe
 item.kingdomcompanion_itemhammerbone.name=Bone Hammer
-item.kingdomcompanion_itemswordenderium.name=Enderium Sword
-item.kingdomcompanion_itemdaggerenderium.name=Enderium Dagger
-item.kingdomcompanion_itemaxeenderium.name=Enderium Axe
-item.kingdomcompanion_itemscytheenderium.name=Enderium Scythe
-item.kingdomcompanion_itemhammerenderium.name=Enderium Hammer
-item.kingdomcompanion_itembladehaseo.name=Blade of Haseo
+item.kingdomcompanion_itemswordenderium.name=§aEnderium Sword§r
+item.kingdomcompanion_itemdaggerenderium.name=§aEnderium Dagger§r
+item.kingdomcompanion_itemaxeenderium.name=§aEnderium Axe§r
+item.kingdomcompanion_itemscytheenderium.name=§aEnderium Scythe§r
+item.kingdomcompanion_itemhammerenderium.name=§aEnderium Hammer§r
+item.kingdomcompanion_itembladehaseo.name=§6Blade of Haseo§r
 
 item.kingdomcompanion_itemtacobeef.name=Beef Taco
 item.kingdomcompanion_itemtacofish.name=Fish Taco
@@ -22,9 +27,12 @@ item.kingdomcompanion_itemtacofish.name=Fish Taco
 item.kingdomcompanion_itembowtwig.name=Twig Bow
 item.kingdomcompanion_itembowwood.name=Wood Bow
 item.kingdomcompanion_itembowbone.name=Bone Bow
-item.kingdomcompanion_itembowenderium.name=Enderium Bow
+item.kingdomcompanion_itembowenderium.name=§aEnderium Bow§r
 
 tile.kingdomcompanion_bonePile.name=Bone Pile
 tile.kingdomcompanion_chains.name=Chains
+tile.kingdomcompanion_spikes.name=Spikes
 
 itemGroup.kingdomcompanion=Kingdom Companion
+
+death.attack.spike=%s was impaled

@@ -7,13 +7,13 @@ public final class ModBlocks {
 
 	public static Block bonePile;
 	public static Block chains;
-	//public static Block derpthing;
+	public static Block spikes;
 	
 	public static void init(){
 		
 		bonePile = new BonePile();
 		chains = new BlockChains();
-		//derpthing = new BlockDerpThing();
+		spikes = new BlockSpikes();
 		
 	}
 	

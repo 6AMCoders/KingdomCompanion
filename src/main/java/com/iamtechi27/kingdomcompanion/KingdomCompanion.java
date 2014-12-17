@@ -2,10 +2,12 @@ package com.iamtechi27.kingdomcompanion;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 
 import com.iamtechi27.kingdomcompanion.blocks.ModBlocks;
 import com.iamtechi27.kingdomcompanion.client.GuiHandler;
 import com.iamtechi27.kingdomcompanion.crafting.ModCrafting;
+import com.iamtechi27.kingdomcompanion.handler.KCEventHandler;
 import com.iamtechi27.kingdomcompanion.handler.RenderRegistry;
 import com.iamtechi27.kingdomcompanion.items.ModItems;
 import com.iamtechi27.kingdomcompanion.lib.Constants;
@@ -48,6 +50,7 @@ public class KingdomCompanion {
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		
+		MinecraftForge.EVENT_BUS.register(new KCEventHandler());
 	}
 	
 	public static CreativeTabs tabKingdomCompanion = new CreativeTabs("kingdomcompanion"){
