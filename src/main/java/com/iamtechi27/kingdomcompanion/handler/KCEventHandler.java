@@ -30,7 +30,7 @@ public class KCEventHandler {
 			NBTTagCompound playerData = KingdomCompanion.proxy.getEntityData(((EntityPlayer) event.entity).getDisplayName() + ExtendedPlayer.EXT_PROP_NAME);
 			if (playerData != null) {
 				((ExtendedPlayer)(event.entity.getExtendedProperties(ExtendedPlayer.EXT_PROP_NAME))).loadNBTData(playerData);
-				System.out.println(playerData.toString());
+				//System.out.println(playerData.toString()); //debug
 			}
 			//((ExtendedPlayer)(event.entity.getExtendedProperties(ExtendedPlayer.EXT_PROP_NAME))).syncExtendedProperties();
 		}
@@ -44,7 +44,7 @@ public class KCEventHandler {
 			NBTTagCompound playerData = new NBTTagCompound();
 			((ExtendedPlayer)(event.entity.getExtendedProperties(ExtendedPlayer.EXT_PROP_NAME))).saveNBTData(playerData);
 			KingdomCompanion.proxy.storeEntityData(((EntityPlayer) event.entity).getDisplayName() + ExtendedPlayer.EXT_PROP_NAME, playerData);
-			System.out.println("Should've saved...");
+			//System.out.println("Should've saved..."); //debug
 		}
 	}
 	

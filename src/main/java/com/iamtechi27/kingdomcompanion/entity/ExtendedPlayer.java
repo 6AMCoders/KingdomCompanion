@@ -31,7 +31,7 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 		NBTTagCompound properties = new NBTTagCompound();
 		properties.setString("PlayerClass", this.playerClass.name());
 		compound.setTag(EXT_PROP_NAME, properties);
-		System.out.println("[KC PROPS] Saved player class:" + this.playerClass.name());
+		//System.out.println("[KC PROPS] Saved player class:" + this.playerClass.name()); //debug
 
 	}
 

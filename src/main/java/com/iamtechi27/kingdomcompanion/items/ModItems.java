@@ -1,7 +1,7 @@
 package com.iamtechi27.kingdomcompanion.items;
 
 import com.iamtechi27.kingdomcompanion.handler.RenderBigItem;
-import com.iamtechi27.kingdomcompanion.items.ItemModSword.WeaponClass;
+import com.iamtechi27.kingdomcompanion.util.WeaponClass;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
@@ -77,7 +77,7 @@ public final class ModItems {
 	public static void init() {
 		
 		rapier = new ItemRapier(RAPIER);
-		haseoblade = new ItemModSword("haseo", "itemblade", HASEO, daggertime);
+		haseoblade = new ItemModSword("itembladehaseo", WeaponClass.SWORD, HASEO, 20);
 		
 		woolsword = new ItemModSword("wool", WeaponClass.SWORD, WOOLSWORD);
 		wooldagger = new ItemModSword("wool", WeaponClass.DAGGER, WOOLDAGGER);

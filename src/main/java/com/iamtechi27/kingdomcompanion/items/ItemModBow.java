@@ -16,8 +16,10 @@ import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
 
 import com.iamtechi27.kingdomcompanion.KingdomCompanion;
+import com.iamtechi27.kingdomcompanion.entity.ExtendedPlayer;
 import com.iamtechi27.kingdomcompanion.lib.Constants;
 import com.iamtechi27.kingdomcompanion.util.PlayerUtils;
+import com.iamtechi27.kingdomcompanion.util.WeaponClass;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -46,16 +48,24 @@ public class ItemModBow extends ItemBow {
 		
 	}
 	
-	/*public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
+	@Override
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
     {
-		
-		ArrowNockEvent event = new ArrowNockEvent(player, stack);
-		MinecraftForge.EVENT_BUS.post(event);
-		if (event.isCanceled()) {
-			return event.result;
-		}
-		return stack;
-    }*/
+        if(PlayerUtils.canPlayerUseItem(player, WeaponClass.BOW)){
+        	ArrowNockEvent event = new ArrowNockEvent(player, stack);
+        	MinecraftForge.EVENT_BUS.post(event);
+        	if (event.isCanceled())
+        	{
+        		return event.result;
+        	}
+
+        	if (player.capabilities.isCreativeMode || player.inventory.hasItem(Items.arrow))
+        	{
+        		player.setItemInUse(stack, this.getMaxItemUseDuration(stack));
+        	}
+        }
+        return stack;
+    }
 	
 	@Override
 	public void onPlayerStoppedUsing(ItemStack bow, World world, EntityPlayer player, int ticksRemaining) {

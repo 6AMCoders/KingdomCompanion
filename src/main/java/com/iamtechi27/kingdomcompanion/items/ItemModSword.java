@@ -10,6 +10,7 @@ import com.iamtechi27.kingdomcompanion.KingdomCompanion;
 import com.iamtechi27.kingdomcompanion.entity.ExtendedPlayer;
 import com.iamtechi27.kingdomcompanion.lib.Constants;
 import com.iamtechi27.kingdomcompanion.util.PlayerUtils;
+import com.iamtechi27.kingdomcompanion.util.WeaponClass;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -23,14 +24,14 @@ public class ItemModSword extends ItemSword {
 	private WeaponClass weaponclass;
 	private boolean isUnique;
 	
-	public ItemModSword(String mat, String name, ToolMaterial material, int s) {
+	public ItemModSword(String name, WeaponClass c, ToolMaterial material, int s) {
 		super(material);
-		setUnlocalizedName(Constants.MODID + "_" + name + mat);
-		setTextureName(Constants.MODID + ":" + name + mat);
-		GameRegistry.registerItem(this,  name + mat);
+		setUnlocalizedName(Constants.MODID + "_" + name);
+		setTextureName(Constants.MODID + ":" + name);
+		GameRegistry.registerItem(this,  name);
 		setCreativeTab(KingdomCompanion.tabKingdomCompanion);
 		attackSpeed = s;
-		this.weaponclass = WeaponClass.SWORD;
+		this.weaponclass = c;
 	}
 	
 	public ItemModSword(String mat, WeaponClass c, ToolMaterial material) {
@@ -52,6 +53,8 @@ public class ItemModSword extends ItemSword {
 			break;
 		case HAMMER:
 			this.attackSpeed = 70;
+			break;
+		default:
 			break;
 		}
 		this.weaponclass = c;
@@ -87,12 +90,6 @@ public class ItemModSword extends ItemSword {
 		return fuckingThing;
     }
 	
-	public static enum WeaponClass {
-		SWORD,
-		DAGGER,
-		AXE,
-		SCYTHE,
-		HAMMER;
-	}
+	
 	
 }

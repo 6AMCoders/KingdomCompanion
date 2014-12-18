@@ -28,13 +28,13 @@ public class CommonProxy {
 		// TODO Auto-generated method stub
 		//System.out.println("SHOULD NEVER GET HERE SAVE");
 		extendedEntityData.put(name, compound);
-		System.out.println("Save'd to commonproxy");
+		//System.out.println("Save'd to commonproxy"); //debug
 	}
 
 	public NBTTagCompound getEntityData(String name) {
 		// TODO Auto-generated method stub
 		//System.out.println("SHOULD NEVER GET HERE LOAD");
-		System.out.println("load'd from commonproxy");
+		//System.out.println("load'd from commonproxy"); //debug
 		return extendedEntityData.remove(name);
 	}
 

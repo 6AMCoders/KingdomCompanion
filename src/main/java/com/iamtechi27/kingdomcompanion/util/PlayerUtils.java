@@ -2,8 +2,6 @@ package com.iamtechi27.kingdomcompanion.util;
 
 import com.iamtechi27.kingdomcompanion.entity.ExtendedPlayer;
 import com.iamtechi27.kingdomcompanion.entity.PlayerClass;
-import com.iamtechi27.kingdomcompanion.items.ItemModSword.WeaponClass;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -75,6 +73,10 @@ public class PlayerUtils {
 			return false;
 		case HAMMER:
 			if (pc == PlayerClass.NONE || pc == PlayerClass.WARRIOR || pc == PlayerClass.KNIGHT || pc == PlayerClass.PALADIN || pc == PlayerClass.SPELLBLADE || pc == PlayerClass.REAPER)
+				return true;
+			return false;
+		case BOW:
+			if (pc ==  PlayerClass.NONE || pc == PlayerClass.RANGER || pc == PlayerClass.MARKSMAN || pc == PlayerClass.ROGUE || pc == PlayerClass.ARCANE_RANGER || pc == PlayerClass.HUNTER)
 				return true;
 			return false;
 		default:
