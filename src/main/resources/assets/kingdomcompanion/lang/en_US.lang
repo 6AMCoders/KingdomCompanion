@@ -32,6 +32,7 @@ item.kingdomcompanion_itembowenderium.name=§aEnderium Bow§r
 tile.kingdomcompanion_bonePile.name=Bone Pile
 tile.kingdomcompanion_chains.name=Chains
 tile.kingdomcompanion_spikes.name=Spikes
+tile.kingdomcompanion_invisiblepressureplate.name=Invisible Pressure Plate
 
 itemGroup.kingdomcompanion=Kingdom Companion
 
