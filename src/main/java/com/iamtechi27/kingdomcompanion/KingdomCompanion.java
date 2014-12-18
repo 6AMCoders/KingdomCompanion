@@ -6,6 +6,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import com.iamtechi27.kingdomcompanion.blocks.ModBlocks;
 import com.iamtechi27.kingdomcompanion.client.GuiHandler;
+import com.iamtechi27.kingdomcompanion.command.ClassCommand;
 import com.iamtechi27.kingdomcompanion.crafting.ModCrafting;
 import com.iamtechi27.kingdomcompanion.handler.KCEventHandler;
 import com.iamtechi27.kingdomcompanion.handler.RenderRegistry;
@@ -65,5 +66,6 @@ public class KingdomCompanion {
 	public void serverLoad(FMLServerStartingEvent event)
 	{
 		//event.registerServerCommand(new GodCommand());
+		event.registerServerCommand(new ClassCommand());
 	}
 }

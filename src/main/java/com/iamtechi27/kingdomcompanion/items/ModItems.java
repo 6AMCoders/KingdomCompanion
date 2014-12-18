@@ -1,6 +1,7 @@
 package com.iamtechi27.kingdomcompanion.items;
 
 import com.iamtechi27.kingdomcompanion.handler.RenderBigItem;
+import com.iamtechi27.kingdomcompanion.items.ItemModSword.WeaponClass;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
@@ -19,11 +20,11 @@ public final class ModItems {
 	public static Item rapier;
 	public static Item haseoblade;
 	
-	public static Item whitewoolsword;
-	public static Item whitewooldagger;
-	public static Item whitewoolaxe;
-	public static Item whitewoolscythe;
-	public static Item whitewoolhammer;
+	public static Item woolsword;
+	public static Item wooldagger;
+	public static Item woolaxe;
+	public static Item woolscythe;
+	public static Item woolhammer;
 	
 	public static Item woodsword;
 	public static Item wooddagger;
@@ -78,29 +79,29 @@ public final class ModItems {
 		rapier = new ItemRapier(RAPIER);
 		haseoblade = new ItemModSword("haseo", "itemblade", HASEO, daggertime);
 		
-		whitewoolsword = new ItemModSword("white", "itemwoolsword", WOOLSWORD, swordtime);
-		whitewooldagger = new ItemModSword("white", "itemwooldagger", WOOLDAGGER, daggertime);
-		whitewoolaxe = new ItemModSword("white", "itemwoolaxe", WOOLAXE, axetime);
-		whitewoolscythe = new ItemModSword("white", "itemwoolscythe", WOOLAXE, swordtime);
-		whitewoolhammer = new ItemModSword("white", "itemwoolhammer", WOOLHAMMER, hammertime);
+		woolsword = new ItemModSword("wool", WeaponClass.SWORD, WOOLSWORD);
+		wooldagger = new ItemModSword("wool", WeaponClass.DAGGER, WOOLDAGGER);
+		woolaxe = new ItemModSword("wool", WeaponClass.AXE, WOOLAXE);
+		woolscythe = new ItemModSword("wool", WeaponClass.SCYTHE, WOOLAXE);
+		woolhammer = new ItemModSword("wool", WeaponClass.HAMMER, WOOLHAMMER);
 		
-		woodsword = new ItemModSword("wood", "itemsword", WOODSWORD, swordtime);
-		wooddagger = new ItemModSword("wood", "itemdagger", WOODDAGGER, daggertime);
-		woodaxe = new ItemModSword("wood", "itemaxe", WOODAXE, axetime);
-		woodscythe = new ItemModSword("wood", "itemscythe", WOODAXE, swordtime);
-		woodhammer = new ItemModSword("wood", "itemhammer", WOODHAMMER, hammertime);
+		woodsword = new ItemModSword("wood", WeaponClass.SWORD, WOODSWORD);
+		wooddagger = new ItemModSword("wood", WeaponClass.DAGGER, WOODDAGGER);
+		woodaxe = new ItemModSword("wood", WeaponClass.AXE, WOODAXE);
+		woodscythe = new ItemModSword("wood", WeaponClass.SCYTHE, WOODAXE);
+		woodhammer = new ItemModSword("wood", WeaponClass.HAMMER, WOODHAMMER);
 		
-		bonesword = new ItemModSword("bone", "itemsword", BONESWORD, swordtime);
-		bonedagger = new ItemModSword("bone", "itemdagger", BONEDAGGER, daggertime);
-		boneaxe = new ItemModSword("bone", "itemaxe", BONEAXE, axetime);
-		bonescythe = new ItemModSword("bone", "itemscythe", BONEAXE, swordtime);
-		bonehammer = new ItemModSword("bone", "itemhammer", BONEHAMMER, hammertime);
+		bonesword = new ItemModSword("bone", WeaponClass.SWORD, BONESWORD);
+		bonedagger = new ItemModSword("bone", WeaponClass.DAGGER, BONEDAGGER);
+		boneaxe = new ItemModSword("bone", WeaponClass.AXE, BONEAXE);
+		bonescythe = new ItemModSword("bone", WeaponClass.SCYTHE, BONEAXE);
+		bonehammer = new ItemModSword("bone", WeaponClass.HAMMER, BONEHAMMER);
 		
-		enderiumsword = new ItemModSword("enderium", "itemsword", ENDERIUMSWORD, swordtime);
-		enderiumdagger = new ItemModSword("enderium", "itemdagger", ENDERIUMDAGGER, daggertime);
-		enderiumaxe = new ItemModSword("enderium", "itemaxe", ENDERIUMAXE, axetime);
-		enderiumscythe = new ItemModSword("enderium", "itemscythe", ENDERIUMAXE, swordtime);
-		enderiumhammer = new ItemModSword("enderium", "itemhammer", ENDERIUMHAMMER, hammertime);
+		enderiumsword = new ItemModSword("enderium", WeaponClass.SWORD, ENDERIUMSWORD);
+		enderiumdagger = new ItemModSword("enderium", WeaponClass.DAGGER, ENDERIUMDAGGER);
+		enderiumaxe = new ItemModSword("enderium", WeaponClass.AXE, ENDERIUMAXE);
+		enderiumscythe = new ItemModSword("enderium", WeaponClass.SCYTHE, ENDERIUMAXE);
+		enderiumhammer = new ItemModSword("enderium", WeaponClass.HAMMER, ENDERIUMHAMMER);
 		
 		itemtacobeef = new ItemTaco("beef", 9, 12.8F, false);
 		itemtacofish = new ItemTaco("fish", 12, 19.2F, false);

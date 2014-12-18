@@ -1,5 +1,9 @@
 package com.iamtechi27.kingdomcompanion.util;
 
+import com.iamtechi27.kingdomcompanion.entity.ExtendedPlayer;
+import com.iamtechi27.kingdomcompanion.entity.PlayerClass;
+import com.iamtechi27.kingdomcompanion.items.ItemModSword.WeaponClass;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -47,6 +51,35 @@ public class PlayerUtils {
 			player.inventory.addItemStackToInventory(new ItemStack(item, required - consumed));
 		}
 		return consumed == 0;
+	}
+	
+	public static boolean canPlayerUseItem(EntityPlayer player, WeaponClass weaponclass) {
+		
+		PlayerClass pc = ExtendedPlayer.get(player).getPlayerClass();
+		switch (weaponclass) {
+		case SWORD:
+			if (pc == PlayerClass.NONE || pc == PlayerClass.WARRIOR || pc == PlayerClass.KNIGHT || pc == PlayerClass.SPELLBLADE || pc == PlayerClass.REAPER)
+				return true;
+			return false;
+		case DAGGER:
+			if (pc == PlayerClass.NONE || pc == PlayerClass.RANGER || pc == PlayerClass.MARKSMAN || pc == PlayerClass.ROGUE || pc == PlayerClass.ARCANE_RANGER || pc == PlayerClass.HUNTER)
+				return true;
+			return false;
+		case AXE:
+			if (pc == PlayerClass.NONE || pc == PlayerClass.WARRIOR || pc == PlayerClass.KNIGHT || pc == PlayerClass.SPELLBLADE || pc == PlayerClass.ROGUE || pc == PlayerClass.REAPER)
+				return true;
+			return false;
+		case SCYTHE:
+			if (pc == PlayerClass.NONE || pc == PlayerClass.CLERIC || pc == PlayerClass.PALADIN || pc == PlayerClass.WHITE_MAGE || pc == PlayerClass.HUNTER || pc == PlayerClass.REAPER)
+				return true;
+			return false;
+		case HAMMER:
+			if (pc == PlayerClass.NONE || pc == PlayerClass.WARRIOR || pc == PlayerClass.KNIGHT || pc == PlayerClass.PALADIN || pc == PlayerClass.SPELLBLADE || pc == PlayerClass.REAPER)
+				return true;
+			return false;
+		default:
+			return false;
+		}
 	}
 	
 }

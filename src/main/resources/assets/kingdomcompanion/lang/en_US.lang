@@ -1,9 +1,9 @@
 ﻿item.kingdomcompanion_itemrapier.name=Rapier
-item.kingdomcompanion_itemwoolswordwhite.name=White Wool Sword
-item.kingdomcompanion_itemwooldaggerwhite.name=White Wool Dagger
-item.kingdomcompanion_itemwoolaxewhite.name=White Wool Axe
-item.kingdomcompanion_itemwoolscythewhite.name=White Wool Scythe
-item.kingdomcompanion_itemwoolhammerwhite.name=White Wool Hammer
+item.kingdomcompanion_itemswordwool.name=Wool Sword
+item.kingdomcompanion_itemdaggerwool.name=Wool Dagger
+item.kingdomcompanion_itemaxewool.name=Wool Axe
+item.kingdomcompanion_itemscythewool.name=Wool Scythe
+item.kingdomcompanion_itemhammerwool.name=Wool Hammer
 item.kingdomcompanion_itemswordwood.name=Wood Sword
 item.kingdomcompanion_itemdaggerwood.name=Wood Dagger
 item.kingdomcompanion_itemaxewood.name=Wood Axe

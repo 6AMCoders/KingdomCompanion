@@ -21,9 +21,9 @@ public class RenderRegistry {
 		 * 2 = Hand of God
 		 */
 		
-		MinecraftForgeClient.registerItemRenderer(ModItems.whitewoolaxe, new RenderBigItem(0, ModItems.whitewoolaxe));
-		MinecraftForgeClient.registerItemRenderer(ModItems.whitewoolscythe, new RenderBigItem(0, ModItems.whitewoolscythe));
-		MinecraftForgeClient.registerItemRenderer(ModItems.whitewoolhammer, new RenderBigItem(0, ModItems.whitewoolhammer));
+		MinecraftForgeClient.registerItemRenderer(ModItems.woolaxe, new RenderBigItem(0, ModItems.woolaxe));
+		MinecraftForgeClient.registerItemRenderer(ModItems.woolscythe, new RenderBigItem(0, ModItems.woolscythe));
+		MinecraftForgeClient.registerItemRenderer(ModItems.woolhammer, new RenderBigItem(0, ModItems.woolhammer));
 		
 		MinecraftForgeClient.registerItemRenderer(ModItems.woodaxe, new RenderBigItem(0, ModItems.woodaxe));
 		MinecraftForgeClient.registerItemRenderer(ModItems.woodscythe, new RenderBigItem(0, ModItems.woodscythe));
