@@ -1,6 +1,8 @@
 package com.iamtechi27.kingdomcompanion.items;
 
+import com.iamtechi27.kingdomcompanion.KingdomCompanion;
 import com.iamtechi27.kingdomcompanion.handler.RenderBigItem;
+import com.iamtechi27.kingdomcompanion.lib.Constants;
 import com.iamtechi27.kingdomcompanion.util.WeaponClass;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -46,6 +48,15 @@ public final class ModItems {
 	
 	public static Item itemtacobeef;
 	public static Item itemtacofish;
+	public static Item netherorb;
+	public static Item enderiumingot;
+	public static Item topazingot;
+	public static Item mithramingot;
+	public static Item thalassiumingot;
+	public static Item demonglassingot;
+	public static Item flouriteingot;
+	public static Item vamptooth;
+	
 	public static Item itembowtwig;
 	public static Item itembowwood;
 	public static Item itembowbone;
@@ -105,6 +116,14 @@ public final class ModItems {
 		
 		itemtacobeef = new ItemTaco("beef", 9, 12.8F, false);
 		itemtacofish = new ItemTaco("fish", 12, 19.2F, false);
+		netherorb = new ItemNetherOrb("netherorb");
+		GameRegistry.registerItem(enderiumingot = new Item().setUnlocalizedName(Constants.MODID + "_" + "enderiumingot").setTextureName(Constants.MODID + ":" + "itemingotenderium").setCreativeTab(KingdomCompanion.tabKingdomCompanion), "itemingotenderium");
+		GameRegistry.registerItem(topazingot = new Item().setUnlocalizedName(Constants.MODID + "_" + "topazingot").setTextureName(Constants.MODID + ":" + "itemingottopaz").setCreativeTab(KingdomCompanion.tabKingdomCompanion), "itemingottopaz");
+		GameRegistry.registerItem(mithramingot = new Item().setUnlocalizedName(Constants.MODID + "_" + "mithramingot").setTextureName(Constants.MODID + ":" + "itemingotmithram").setCreativeTab(KingdomCompanion.tabKingdomCompanion), "itemingotmithram");
+		GameRegistry.registerItem(thalassiumingot = new Item().setUnlocalizedName(Constants.MODID + "_" + "thalassiumingot").setTextureName(Constants.MODID + ":" + "itemingotthalassium").setCreativeTab(KingdomCompanion.tabKingdomCompanion), "itemingotthalassium");
+		GameRegistry.registerItem(demonglassingot = new Item().setUnlocalizedName(Constants.MODID + "_" + "demonglassingot").setTextureName(Constants.MODID + ":" + "itemingotdemonglass").setCreativeTab(KingdomCompanion.tabKingdomCompanion), "itemingotdemonglass");
+		GameRegistry.registerItem(flouriteingot = new Item().setUnlocalizedName(Constants.MODID + "_" + "flouriteingot").setTextureName(Constants.MODID + ":" + "itemingotflourite").setCreativeTab(KingdomCompanion.tabKingdomCompanion), "itemingotflourite");
+		GameRegistry.registerItem(vamptooth = new Item().setUnlocalizedName(Constants.MODID + "_" + "vamptooth").setTextureName(Constants.MODID + ":" + "itemlootvamptooth").setCreativeTab(KingdomCompanion.tabKingdomCompanion), "itemvamptooth");
 		
 		itembowtwig = new ItemModBow("twig", 0.5D);
 		itembowwood = new ItemModBow("wood", 1.05D);

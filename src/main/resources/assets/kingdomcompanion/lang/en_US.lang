@@ -23,6 +23,19 @@ item.kingdomcompanion_itembladehaseo.name=§6Blade of Haseo§r
 
 item.kingdomcompanion_itemtacobeef.name=Beef Taco
 item.kingdomcompanion_itemtacofish.name=Fish Taco
+item.kingdomcompanion_netherorb_enderium.name=Enderium Nether Orb
+item.kingdomcompanion_netherorb_topaz.name=Topaz Nether Orb
+item.kingdomcompanion_netherorb_mithram.name=Mithram Nether Orb
+item.kingdomcompanion_netherorb_thalassium.name=Thalassium Nether Orb
+item.kingdomcompanion_netherorb_demonglass.name=Demonglass Nether Orb
+item.kingdomcompanion_netherorb_flourite.name=Flourite Nether Orb
+item.kingdomcompanion_enderiumingot.name=Enderium Ingot
+item.kingdomcompanion_topazingot.name=Topaz Ingot
+item.kingdomcompanion_mithramingot.name=Mithram Ingot
+item.kingdomcompanion_thalassiumingot.name=Thalassium Ingot
+item.kingdomcompanion_demonglassingot.name=Demonglass Ingot
+item.kingdomcompanion_flouriteingot.name=Flourite Ingot
+item.kingdomcompanion_vamptooth.name=Vampire Tooth
 
 item.kingdomcompanion_itembowtwig.name=Twig Bow
 item.kingdomcompanion_itembowwood.name=Wood Bow
