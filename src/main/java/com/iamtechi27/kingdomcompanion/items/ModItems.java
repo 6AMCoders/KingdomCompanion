@@ -62,6 +62,8 @@ public final class ModItems {
 	public static Item itembowbone;
 	public static Item itembowenderium;
 	
+	public static Item teststaff;
+	
 	public static ToolMaterial RAPIER = EnumHelper.addToolMaterial("RAPIER", 0, 250, 0.0F, Float.MAX_VALUE, 14);
 	public static ToolMaterial HASEO = EnumHelper.addToolMaterial("HASEO", 0, 750, 0.0F, 5.0F, 22);
 	
@@ -130,6 +132,7 @@ public final class ModItems {
 		itembowbone = new ItemModBow("bone", 1.65D);
 		itembowenderium = new ItemModBow("enderium", 1.7D);
 		
+		teststaff = new ItemFireStaff();
 		
 	}
 	

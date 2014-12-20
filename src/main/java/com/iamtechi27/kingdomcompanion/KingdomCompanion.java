@@ -46,6 +46,7 @@ public class KingdomCompanion {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		//NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+		this.proxy.Init(event);
 	}
 	
 	@Mod.EventHandler

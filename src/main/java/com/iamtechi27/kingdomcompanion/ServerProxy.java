@@ -21,9 +21,9 @@ public class ServerProxy extends CommonProxy {
 	}
 
 	@Override
-	public void init(FMLInitializationEvent e) {
+	public void Init(FMLInitializationEvent e) {
 		// TODO Auto-generated method stub
-		super.init(e);
+		super.Init(e);
 	}
 
 	@Override

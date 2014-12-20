@@ -10,6 +10,8 @@ import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
+import cpw.mods.fml.relauncher.Side;
 
 public class KCEventHandler {
 
@@ -21,6 +23,9 @@ public class KCEventHandler {
 			if (props.getPlayerClass() == null) {
 				props.setPlayerClass(PlayerClass.NONE);
 			}
+			if (props.getMaxMana() == 0) {
+				props.setMaxMana(20);
+			}
 		}
 	}
 	
@@ -30,6 +35,7 @@ public class KCEventHandler {
 			NBTTagCompound playerData = KingdomCompanion.proxy.getEntityData(((EntityPlayer) event.entity).getDisplayName() + ExtendedPlayer.EXT_PROP_NAME);
 			if (playerData != null) {
 				((ExtendedPlayer)(event.entity.getExtendedProperties(ExtendedPlayer.EXT_PROP_NAME))).loadNBTData(playerData);
+				ExtendedPlayer.get((EntityPlayer)event.entity).instantMana(ExtendedPlayer.get((EntityPlayer)event.entity).getMaxMana());
 				//System.out.println(playerData.toString()); //debug
 			}
 			//((ExtendedPlayer)(event.entity.getExtendedProperties(ExtendedPlayer.EXT_PROP_NAME))).syncExtendedProperties();
@@ -45,6 +51,13 @@ public class KCEventHandler {
 			((ExtendedPlayer)(event.entity.getExtendedProperties(ExtendedPlayer.EXT_PROP_NAME))).saveNBTData(playerData);
 			KingdomCompanion.proxy.storeEntityData(((EntityPlayer) event.entity).getDisplayName() + ExtendedPlayer.EXT_PROP_NAME, playerData);
 			//System.out.println("Should've saved..."); //debug
+		}
+	}
+	
+	@SubscribeEvent
+	public void onPlayerTickEvent(TickEvent.PlayerTickEvent event) {
+		if (event.side == Side.CLIENT) {
+			System.out.println("I'm a server!");
 		}
 	}
 	

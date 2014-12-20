@@ -31,6 +31,14 @@ public class ClassCommand extends CommandBase {
 			}else{			
 			ExtendedPlayer.get(entityplayermp).setPlayerClass(PlayerClass.valueOf(arguments[2].toUpperCase()));
 			}
+		} else if(arguments[0].equals("maxmana")) {
+			EntityPlayerMP entityplayermp = arguments.length == 0 ? getCommandSenderAsPlayer(sender) : getPlayer(sender, arguments[1]);
+			if (entityplayermp == null) {
+				entityplayermp = getCommandSenderAsPlayer(sender);
+				ExtendedPlayer.get(entityplayermp).setMaxMana(Integer.parseInt(arguments[1]));
+			} else {
+				ExtendedPlayer.get(entityplayermp).setMaxMana(Integer.parseInt(arguments[2]));
+			}
 		}
 	}
 

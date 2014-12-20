@@ -3,7 +3,12 @@ package com.iamtechi27.kingdomcompanion;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.NBTTagCompound;
+
+import com.iamtechi27.kingdomcompanion.handler.PlayerTickHandler;
+
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -16,8 +21,8 @@ public class CommonProxy {
 
     }
 
-    public void init(FMLInitializationEvent e) {
-
+    public void Init(FMLInitializationEvent e) {
+    	FMLCommonHandler.instance().bus().register(new PlayerTickHandler(Minecraft.getMinecraft()));
     }
 
     public void postInit(FMLPostInitializationEvent e) {
