@@ -12,8 +12,8 @@ public class PlayerTickHandler {
 
 	private Minecraft mc;
 	
-	public PlayerTickHandler(Minecraft mc) {
-		this.mc = mc;
+	public PlayerTickHandler() {
+		//this.mc = mc;
 	}
 	
 	@SubscribeEvent

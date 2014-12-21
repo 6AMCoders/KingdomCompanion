@@ -1,7 +1,12 @@
 package com.iamtechi27.kingdomcompanion.entity;
 
+import com.iamtechi27.kingdomcompanion.KingdomCompanion;
+import com.iamtechi27.kingdomcompanion.network.CurrentManaMessage;
+import com.iamtechi27.kingdomcompanion.network.MaxManaMessage;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IExtendedEntityProperties;
@@ -70,11 +75,15 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 	
 	public void setMaxMana(int mana) {
 		this.maxMana = mana;
+		if(!player.worldObj.isRemote)
+		KingdomCompanion.MAXMANANETWORK.sendTo(new MaxManaMessage(this.maxMana), (EntityPlayerMP) player);
 	}
 	
 	public boolean consumeMana(int amount) {
 		boolean sufficient = amount <= this.currentMana;
 		this.currentMana -= (amount < this.currentMana ? amount : this.currentMana);
+		if(!player.worldObj.isRemote)
+		KingdomCompanion.CURRENTMANANETWORK.sendTo(new CurrentManaMessage(this.currentMana), (EntityPlayerMP) player);
 		return sufficient;
 	}
 	
@@ -83,12 +92,26 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 		if (tickCount >= 40) {
 			this.currentMana += (this.maxMana < (this.currentMana + this.maxMana/20) ? (this.maxMana - this.currentMana) : this.maxMana/20);
 			tickCount = 0;
-			System.out.println("[Extended Player] Mana: " + currentMana);
+			//System.out.println("[Extended Player] Mana: " + currentMana); //debug
+			if (!player.worldObj.isRemote) {
+				KingdomCompanion.CURRENTMANANETWORK.sendTo(new CurrentManaMessage(this.currentMana), (EntityPlayerMP) player);
+			}
 		}
 	}
 	
 	public void instantMana(int amount) {
 		this.currentMana += (this.maxMana < (this.currentMana + amount) ? (this.maxMana - this.currentMana) : amount);
+		if(!player.worldObj.isRemote)
+		KingdomCompanion.CURRENTMANANETWORK.sendTo(new CurrentManaMessage(this.currentMana), (EntityPlayerMP) player);
+	}
+
+	public int getCurrentMana() {
+		// TODO Auto-generated method stub
+		return this.currentMana;
+	}
+	
+	public void setCurrentMana(int amount) {
+		this.currentMana = amount;
 	}
 
 }
