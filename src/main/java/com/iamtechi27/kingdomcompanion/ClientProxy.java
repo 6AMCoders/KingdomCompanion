@@ -27,6 +27,7 @@ public class ClientProxy extends CommonProxy {
 		// TODO Auto-generated method stub
 		super.Init(e);
 		MinecraftForge.EVENT_BUS.register(new GuiManaBar(Minecraft.getMinecraft()));
+		MinecraftForge.EVENT_BUS.register(new GuiBuffBar(Minecraft.getMinecraft()));
 	}
 
 	@Override

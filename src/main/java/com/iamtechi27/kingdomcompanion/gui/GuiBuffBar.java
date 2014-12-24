@@ -1,3 +1,10 @@
+/*
+ * this entire class was stolen from a tutorial.
+ * for the record, I think this code is shit.
+ * TODO rewrite this.
+ */
+
+
 package com.iamtechi27.kingdomcompanion.gui;
 
 import java.util.Collection;
@@ -41,7 +48,7 @@ public class GuiBuffBar extends Gui {
 			return;
 		}
 		int xPos = 2;
-		int yPos = 2;
+		int yPos = event.resolution.getScaledHeight() - 20;
 		Collection collection = this.mc.thePlayer.getActivePotionEffects();
 		if (!collection.isEmpty()) {
 			GL11.glPushMatrix();

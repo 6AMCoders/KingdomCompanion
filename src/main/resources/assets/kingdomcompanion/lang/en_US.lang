@@ -50,3 +50,4 @@ tile.kingdomcompanion_invisiblepressureplate.name=Invisible Pressure Plate
 itemGroup.kingdomcompanion=Kingdom Companion
 
 death.attack.spike=%s was impaled
+death.attack.killme=%s was asking for it
