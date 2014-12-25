@@ -1,3 +1,16 @@
+/*
+ * GodCommand.java by iamtechi27
+ * This file is part of the Kingdom Companion mod by iamtechi27
+ * Copyright (C) 2014 iamtechi27
+ * Released under the GNU GPL v3.0
+ * Feel free to do whatever you like with it
+ * Citation is requested, but not required, should you copy any of this code.
+ * 
+ * This is the class for the handofgod command.
+ * Right now, it doesn't do anything, since the hand of god is bugged
+ * TODO fix hand of god and comment this code
+ */
+
 package com.iamtechi27.kingdomcompanion;
 
 import java.util.List;

@@ -1,3 +1,12 @@
+/*
+ * BlockChains.java by iamtechi27
+ * This file is part of the Kingdom Companion mod by iamtechi27
+ * Copyright (C) 2014 iamtechi27
+ * Released under the GNU GPL v3.0
+ * Feel free to do whatever you like with it
+ * Citation is requested, but not required, should you copy any of this code.
+ */
+
 package com.iamtechi27.kingdomcompanion.blocks;
 
 import java.util.List;
@@ -23,6 +32,7 @@ public class BlockChains extends Block {
 
 	private String name = "chains";
 	
+	// constructor. called in ModBlocks.java
 	protected BlockChains() {
 		super(Material.web);
 		this.setCreativeTab(KingdomCompanion.tabKingdomCompanion);
@@ -31,10 +41,13 @@ public class BlockChains extends Block {
 		GameRegistry.registerBlock(this, name);
 	}
 
-    public void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, List p_149743_6_, Entity p_149743_7_) {
+    // collision box. I need to tweak this a little.
+	// TODO tweak this
+	public void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, List p_149743_6_, Entity p_149743_7_) {
     	this.setBlockBounds(0.375F, 0.0F, 0.375F, 0.625F, 1.0F, 0.625F);
     }
 
+    // makes it so that the blocks next to this one render, as this isn't a full block
     public boolean isOpaqueCube()
     {
         return false;
@@ -50,22 +63,19 @@ public class BlockChains extends Block {
     
     /**
      * The type of render function that is called for this block
+     * uses same rendering as sugar cane etc
      */
     public int getRenderType()
     {
         return 1;
     }
     
-    /*@Override
-    public boolean isLadder(IBlockAccess world, int x, int y, int z, EntityLivingBase entity)
-    {
-        return true;
-    }*/
-    
     /**
      * This method was written by Luppii for his "Luppii's Ladders" mod.
      * Copy/pasted from his github at http://goo.gl/xUcaXR.
      * Check out his mod, as it's quite neat.
+     * 
+     * TODO rewrite this in a way that better suits my needs
      */
     @Override
     @SideOnly(Side.CLIENT)
@@ -131,6 +141,7 @@ public class BlockChains extends Block {
     }
     }
     
+    // more collision box stuff, I think
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4) {
 		
     	AxisAlignedBB box = AxisAlignedBB.getBoundingBox(0.365F, 0.0F, 0.365F, 0.635F, 1.0F, 0.635F);

@@ -1,3 +1,12 @@
+/*
+ * ClientProxy.java by iamtechi27
+ * This file is part of the Kingdom Companion mod by iamtechi27
+ * Copyright (C) 2014 iamtechi27
+ * Released under the GNU GPL v3.0
+ * Feel free to do whatever you like with it
+ * Citation is requested, but not required, should you copy any of this code.
+ */
+
 package com.iamtechi27.kingdomcompanion;
 
 import net.minecraft.client.Minecraft;
@@ -15,16 +24,16 @@ import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 
 public class ClientProxy extends CommonProxy {
 
+	//registers the render code used for axes, hammers, and scythes
 	@Override
 	public void preInit(FMLPreInitializationEvent e) {
-		// TODO Auto-generated method stub
 		super.preInit(e);
 		RenderRegistry.init();
 	}
 
+	//registers the event listeners that render my mana bar and the potion status bar
 	@Override
 	public void Init(FMLInitializationEvent e) {
-		// TODO Auto-generated method stub
 		super.Init(e);
 		MinecraftForge.EVENT_BUS.register(new GuiManaBar(Minecraft.getMinecraft()));
 		MinecraftForge.EVENT_BUS.register(new GuiBuffBar(Minecraft.getMinecraft()));
@@ -32,10 +41,11 @@ public class ClientProxy extends CommonProxy {
 
 	@Override
 	public void postInit(FMLPostInitializationEvent e) {
-		// TODO Auto-generated method stub
 		super.postInit(e);
 	}
 
+	//little tool used to get a player from a message
+	//used in networking so I can figure out the player's username
 	@Override
 	public EntityPlayer getPlayerFromMessageContext(MessageContext ctx) {
 		switch (ctx.side) {

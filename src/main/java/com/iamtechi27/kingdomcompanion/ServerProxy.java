@@ -1,3 +1,12 @@
+/*
+ * ServerProxy.java by iamtechi27
+ * This file is part of the Kingdom Companion mod by iamtechi27
+ * Copyright (C) 2014 iamtechi27
+ * Released under the GNU GPL v3.0
+ * Feel free to do whatever you like with it
+ * Citation is requested, but not required, should you copy any of this code.
+ */
+
 package com.iamtechi27.kingdomcompanion;
 
 import java.util.HashMap;
@@ -15,23 +24,21 @@ public class ServerProxy extends CommonProxy {
 	
 	@Override
 	public void preInit(FMLPreInitializationEvent e) {
-		// TODO Auto-generated method stub
 		super.preInit(e);
-		//GameRegistry.registerTileEntity(TileEntityDerp.class, TileEntityDerp.publicName);
 	}
 
 	@Override
 	public void Init(FMLInitializationEvent e) {
-		// TODO Auto-generated method stub
 		super.Init(e);
 	}
 
 	@Override
 	public void postInit(FMLPostInitializationEvent e) {
-		// TODO Auto-generated method stub
 		super.postInit(e);
 	}
 	
+	// useless. commonproxy variant gets called instead
+	// TODO figure out why that is
 	public void storeEntityData(String name, NBTTagCompound compound) {
 		
 		extendedEntityData.put(name, compound);
@@ -39,7 +46,7 @@ public class ServerProxy extends CommonProxy {
 		
 	}
 	
-	
+	// see above comment
 	public NBTTagCompound getEntityData(String name) {
 		System.out.println("load'd");
 		return extendedEntityData.remove(name);

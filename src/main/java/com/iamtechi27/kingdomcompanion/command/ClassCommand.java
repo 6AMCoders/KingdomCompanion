@@ -1,3 +1,16 @@
+/*
+ * ClassCommand.java by iamtechi27
+ * This file is part of the Kingdom Companion mod by iamtechi27
+ * Copyright (C) 2014 iamtechi27
+ * Released under the GNU GPL v3.0
+ * Feel free to do whatever you like with it
+ * Citation is requested, but not required, should you copy any of this code.
+ * 
+ * It's called "ClassCommand" but really this is where all "/kc" commands are handled.
+ * TODO do the refactor thingy
+ * TODO fix this so command blocks can use it
+ */
+
 package com.iamtechi27.kingdomcompanion.command;
 
 import com.iamtechi27.kingdomcompanion.entity.ExtendedPlayer;
@@ -11,13 +24,11 @@ public class ClassCommand extends CommandBase {
 
 	@Override
 	public String getCommandName() {
-		// TODO Auto-generated method stub
 		return "kc";
 	}
 
 	@Override
 	public String getCommandUsage(ICommandSender p_71518_1_) {
-		// TODO Auto-generated method stub
 		return "kc";
 	}
 

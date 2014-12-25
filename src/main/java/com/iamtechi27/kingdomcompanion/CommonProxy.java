@@ -1,3 +1,12 @@
+/*
+ * CommonProxy.java by iamtechi27
+ * This file is part of the Kingdom Companion mod by iamtechi27
+ * Copyright (C) 2014 iamtechi27
+ * Released under the GNU GPL v3.0
+ * Feel free to do whatever you like with it
+ * Citation is requested, but not required, should you copy any of this code.
+ */
+
 package com.iamtechi27.kingdomcompanion;
 
 import java.util.HashMap;
@@ -23,7 +32,8 @@ public class CommonProxy {
 
     }
 
-    public void Init(FMLInitializationEvent e) {
+    //registers the PlayerTickHandler, which is used for mana regen.
+	public void Init(FMLInitializationEvent e) {
     	FMLCommonHandler.instance().bus().register(new PlayerTickHandler());
     }
 
@@ -31,21 +41,22 @@ public class CommonProxy {
 
     }
 
-	public void storeEntityData(String name, NBTTagCompound compound) {
-		// TODO Auto-generated method stub
-		//System.out.println("SHOULD NEVER GET HERE SAVE");
+	//this is here because it was getting called in commonproxy for some reason,
+    //even though it should've been using the server proxy. whatever.
+    //stores entity data (player class and mana) on death
+    public void storeEntityData(String name, NBTTagCompound compound) {
 		extendedEntityData.put(name, compound);
 		//System.out.println("Save'd to commonproxy"); //debug
 	}
 
-	public NBTTagCompound getEntityData(String name) {
-		// TODO Auto-generated method stub
-		//System.out.println("SHOULD NEVER GET HERE LOAD");
+	//see above comment, except this one loads after death
+    public NBTTagCompound getEntityData(String name) {
 		//System.out.println("load'd from commonproxy"); //debug
 		return extendedEntityData.remove(name);
 	}
 
-	public EntityPlayer getPlayerFromMessageContext(MessageContext ctx) {
+	//I don't remember why I put this here. Useless for now.
+    public EntityPlayer getPlayerFromMessageContext(MessageContext ctx) {
 		switch (ctx.side) {
 		case CLIENT: 
 			assert false: "Message for CLIENT received on dedicated server";
