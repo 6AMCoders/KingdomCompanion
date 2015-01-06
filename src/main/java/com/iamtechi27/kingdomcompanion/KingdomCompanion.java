@@ -50,7 +50,7 @@ public class KingdomCompanion {
 	//I don't really remember what this is used for...
 	@Mod.Instance(Constants.MODID)
 	public static KingdomCompanion instance;
-	
+	//leaving this here as a test
 	//setup for sided proxy
 	@SidedProxy(clientSide="com.iamtechi27.kingdomcompanion.ClientProxy", serverSide="com.iamtechi27.kingdomcompanion.ServerProxy")
 	public static CommonProxy proxy;
