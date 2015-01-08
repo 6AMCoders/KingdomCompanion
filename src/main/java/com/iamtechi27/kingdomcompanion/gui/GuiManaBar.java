@@ -36,7 +36,7 @@ public class GuiManaBar extends Gui {
 	}
 	
 	// listener for the game overlay render event thingy. Then we render our thing.
-	@SubscribeEvent(priority = EventPriority.NORMAL)
+	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public void onRenderGameOverlay(RenderGameOverlayEvent event) {
 		
 		if (event.isCancelable() || event.type != ElementType.EXPERIENCE) {
@@ -55,6 +55,8 @@ public class GuiManaBar extends Gui {
 		int xPos = ((event.resolution.getScaledWidth() / 2) + 91);
 		int yPos = (event.resolution.getScaledHeight() - 22);
 		GL11.glPushMatrix();
+		GL11.glDisable(GL11.GL_BLEND);
+		GL11.glDisable(GL11.GL_ALPHA_TEST);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		GL11.glDisable(GL11.GL_LIGHTING);
 		this.mc.getTextureManager().bindTexture(texturepath);
