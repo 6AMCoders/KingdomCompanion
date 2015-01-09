@@ -17,6 +17,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
@@ -33,12 +34,12 @@ public class BlockSpikes extends Block {
 		GameRegistry.registerBlock(this, name);
 	}
 	
-	// this is where the magic happens. when the player falls on it, it applies enough damage to kill most entities.
+	// this is where the magic happens. when the player falls on it, it checks to see if the entity is living, then applies it's max health in damage.
 	@Override
 	public void onFallenUpon(World par1World, int par2, int par3, int par4, Entity entity, float par6) {
 		
-		//TODO get entity health for damage
-		entity.attackEntityFrom(new SpikeDamage(), 100.0F);
+		if (entity instanceof EntityLivingBase)
+		entity.attackEntityFrom(new SpikeDamage(), ((EntityLivingBase)entity).getMaxHealth());
 	}
 	
 	// applies a little damage when the player touches the block
@@ -47,8 +48,7 @@ public class BlockSpikes extends Block {
 		entity.attackEntityFrom(new SpikeDamage(), 1.0F);
 	}
 	
-	// bounding box or something. all i know is the collision code doesn't work without this
-	// TODO learn more about this
+	// bounding box or something. without this, I can't do damage to players standing next to the block.
 	@Override
 	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
     {

@@ -75,7 +75,8 @@ public class BlockChains extends Block {
      * Copy/pasted from his github at http://goo.gl/xUcaXR.
      * Check out his mod, as it's quite neat.
      * 
-     * TODO rewrite this in a way that better suits my needs
+     * Much of this method has been changed from how Luppii had it, but a lot
+     * of the code is still his, so I'm leaving this message here.
      */
     @Override
     @SideOnly(Side.CLIENT)
