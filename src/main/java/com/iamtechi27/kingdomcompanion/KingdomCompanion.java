@@ -16,7 +16,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import com.iamtechi27.kingdomcompanion.blocks.ModBlocks;
 import com.iamtechi27.kingdomcompanion.client.GuiHandler;
-import com.iamtechi27.kingdomcompanion.command.ClassCommand;
+import com.iamtechi27.kingdomcompanion.command.KCCommands;
 import com.iamtechi27.kingdomcompanion.crafting.ModCrafting;
 import com.iamtechi27.kingdomcompanion.gui.GuiBuffBar;
 import com.iamtechi27.kingdomcompanion.handler.KCEventHandler;
@@ -50,7 +50,7 @@ public class KingdomCompanion {
 	//I don't really remember what this is used for...
 	@Mod.Instance(Constants.MODID)
 	public static KingdomCompanion instance;
-	//leaving this here as a test
+
 	//setup for sided proxy
 	@SidedProxy(clientSide="com.iamtechi27.kingdomcompanion.ClientProxy", serverSide="com.iamtechi27.kingdomcompanion.ServerProxy")
 	public static CommonProxy proxy;
@@ -109,6 +109,6 @@ public class KingdomCompanion {
 	public void serverLoad(FMLServerStartingEvent event)
 	{
 		//event.registerServerCommand(new GodCommand());
-		event.registerServerCommand(new ClassCommand());
+		event.registerServerCommand(new KCCommands());
 	}
 }

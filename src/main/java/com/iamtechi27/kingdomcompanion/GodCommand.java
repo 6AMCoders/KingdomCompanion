@@ -64,11 +64,8 @@ public class GodCommand extends CommandBase implements ICommand {
 	}
 
 	@Override
-	public boolean canCommandSenderUseCommand(ICommandSender par1) {
-		// TODO Auto-generated method stub
-		if(((EntityPlayerMP)par1).mcServer.getOpPermissionLevel() >=2)
-			return true;
-		return false;
+	public int getRequiredPermissionLevel() {
+		return 2;
 	}
 
 	@Override

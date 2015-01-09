@@ -6,8 +6,6 @@
  * Feel free to do whatever you like with it
  * Citation is requested, but not required, should you copy any of this code.
  * 
- * It's called "ClassCommand" but really this is where all "/kc" commands are handled.
- * TODO do the refactor thingy
  * TODO fix this so command blocks can use it
  */
 
@@ -20,7 +18,7 @@ import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;
 
-public class ClassCommand extends CommandBase {
+public class KCCommands extends CommandBase {
 
 	@Override
 	public String getCommandName() {
@@ -51,6 +49,11 @@ public class ClassCommand extends CommandBase {
 				ExtendedPlayer.get(entityplayermp).setMaxMana(Integer.parseInt(arguments[2]));
 			}
 		}
+	}
+	
+	@Override
+	public int getRequiredPermissionLevel() {
+		return 2;
 	}
 
 }
