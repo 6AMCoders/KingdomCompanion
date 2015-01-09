@@ -20,13 +20,11 @@ public class MaxManaMessage implements IMessage {
 	
 	@Override
 	public void fromBytes(ByteBuf buf) {
-		// TODO Auto-generated method stub
 		this.mana = buf.readInt();
 	}
 
 	@Override
 	public void toBytes(ByteBuf buf) {
-		// TODO Auto-generated method stub
 		buf.writeInt(this.mana);
 	}
 	

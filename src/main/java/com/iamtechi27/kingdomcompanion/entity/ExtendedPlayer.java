@@ -120,7 +120,6 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 	}
 
 	public int getCurrentMana() {
-		// TODO Auto-generated method stub
 		return this.currentMana;
 	}
 	

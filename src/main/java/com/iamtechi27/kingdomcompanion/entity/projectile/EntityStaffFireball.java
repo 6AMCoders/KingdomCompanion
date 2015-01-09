@@ -22,14 +22,6 @@ import net.minecraft.world.World;
 public class EntityStaffFireball extends EntitySmallFireball {
 
 	// just passes the data on up to the super's constructor
-	public EntityStaffFireball(World p_i1771_1_, EntityLivingBase p_i1771_2_,
-			double p_i1771_3_, double p_i1771_5_, double p_i1771_7_) {
-		super(p_i1771_1_, p_i1771_2_, p_i1771_3_, p_i1771_5_, p_i1771_7_);
-		
-	}
-	
-	// see above. One of these is useless but I forget which one
-	// TODO figure out which one is useless
 	public EntityStaffFireball(World world, double posX, double d, double posZ,
 			double xCoord, double yCoord, double zCoord) {
 		super(world, posX, d, posZ, xCoord, yCoord, zCoord);
