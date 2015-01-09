@@ -42,6 +42,8 @@ item.kingdomcompanion_itembowwood.name=Wood Bow
 item.kingdomcompanion_itembowbone.name=Bone Bow
 item.kingdomcompanion_itembowenderium.name=§aEnderium Bow§r
 
+item.kingdomcompanion_staffwood.name=Wood Staff
+
 tile.kingdomcompanion_bonePile.name=Bone Pile
 tile.kingdomcompanion_chains.name=Chains
 tile.kingdomcompanion_spikes.name=Spikes

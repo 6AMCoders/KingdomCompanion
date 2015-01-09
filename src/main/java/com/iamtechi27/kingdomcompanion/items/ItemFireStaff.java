@@ -15,12 +15,14 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemFireStaff extends Item {
 
+	private static final String name = "staffwood";
+	
 	public ItemFireStaff() {
 		super();
-		this.setUnlocalizedName("staffwood");
+		this.setUnlocalizedName(Constants.MODID + "_" + name);
 		this.setTextureName(Constants.MODID + ":itemstaffwood");
 		this.setCreativeTab(KingdomCompanion.tabKingdomCompanion);
-		GameRegistry.registerItem(this, "staffwood");
+		GameRegistry.registerItem(this, name);
 	}
 	
 	@Override public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {

@@ -38,7 +38,6 @@ public class ServerProxy extends CommonProxy {
 	}
 	
 	// useless. commonproxy variant gets called instead
-	// TODO figure out why that is
 	public void storeEntityData(String name, NBTTagCompound compound) {
 		
 		extendedEntityData.put(name, compound);
