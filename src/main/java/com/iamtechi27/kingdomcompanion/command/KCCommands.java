@@ -5,8 +5,6 @@
  * Released under the GNU GPL v3.0
  * Feel free to do whatever you like with it
  * Citation is requested, but not required, should you copy any of this code.
- * 
- * TODO fix this so command blocks can use it
  */
 
 package com.iamtechi27.kingdomcompanion.command;

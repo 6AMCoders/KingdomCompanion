@@ -84,43 +84,21 @@ public class BlockChains extends Block {
     if (entity instanceof EntityPlayer) {
     // Cast to EntityPlayer to make it more strict
     EntityPlayer player = (EntityPlayer) entity;
-    int direction = world.getBlockMetadata(x, y, z) & 3;
     boolean player_close = false;
-    // Look at placement position and calculate if the player is close enough to ladder to "climb"
-    switch (direction) {
-    // SOUTH
-    case 0:
-    if (player.posZ - z >= 0.8D)
+    // Determine if player is close enough to "climb"
+    if (player.posZ - z >= 0.375D || player.posX - x <= 0.625D || player.posZ - z <= 0.625D || player.posX - x >= 0.375D)
     player_close = true;
-    break;
-    // WEST
-    case 1:
-    if (player.posX - x <= 0.2D)
-    player_close = true;
-    break;
-    // NORTH
-    case 2:
-    if (player.posZ - z <= 0.2D)
-    player_close = true;
-    break;
-    // EAST
-    case 3:
-    if (player.posX - x >= 0.8D)
-    player_close = true;
-    break;
-    default:
-    player_close = false;
-    }
     if (player.posY - 1.0D >= y && player_close) {
     player.moveForward = 0.0F;
     // If player is moving down, move slowly down.
     if (player.motionY < -0.15D)
     player.motionY = -0.15D;
     // check if we want to climb up
-    if (GameSettings.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindForward)
+    if ((GameSettings.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindForward)
     || GameSettings.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindBack)
     || GameSettings.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindLeft)
-    || GameSettings.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindRight)) {
+    || GameSettings.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindRight))
+    && GameSettings.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindSneak)) {
     if (player.motionY < 0.2D)
     player.motionY = 0.2D;
     }
